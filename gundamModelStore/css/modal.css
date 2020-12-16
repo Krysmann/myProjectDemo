@@ -1,0 +1,114 @@
+/*modal*/
+.modal{
+	position: fixed;
+	width: 100%;
+	height: 100%;]
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 999;
+	display: none;
+}
+.modal .container{
+	background-color: #f8f5f9;
+	width: 404px;
+	height: 600px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 1em;
+	border-radius: 10%;
+}
+.modal .container .close{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #F10215;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	border: solid 2px #FFFFFF;
+	cursor: pointer;
+}
+.reg{
+	width: 404px;
+	height: 360px;
+	background-color: #f8f5f9;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 180px;
+}
+.reg .login-tab-l{
+	width: 200px;
+	height: 54px;
+	font-size: 18px;
+	text-align: center;
+	float: left;
+}
+.reg .login-tab-l a{
+	color: #666666;
+}
+.login-tab-l a:hover{
+	color: #F10215;
+}
+.reg .login-tab-r{
+	width: 200px;
+	height: 54px;
+	font-size: 18px;
+	text-align: center;
+	float: right;
+}
+.reg .login-tab-r a{
+	color: #F10215;
+}
+.login-form{
+	width: 306px;
+	height: 200px;
+	margin: 0 auto;
+}
+.form-item-forgetpw{
+	width: 300px;
+	height: 36px;
+}
+.form-item-forgetpw a{
+	height: 36px;
+	line-height: 36px;
+	float: right;
+	font-size: 12px;
+	color: #666666;
+}
+.form-item-forgetpw a:hover{
+	text-decoration: underline;
+}
+.form-item-ul{
+	width: 200px;
+	height: 16px;
+	padding-top: 30px;
+}
+.item-ul{
+	width: 200px;
+	height: 16px;
+}
+.item-ul li{
+	height: 16px;
+	line-height: 16px;
+	width: 70px;
+	font-size: 16px;
+	float: left;
+	text-align: center;
+}
+.item-ul a{
+	color: #666666;
+}
+.item-ul li:hover .ite-ul a{
+	text-decoration: underline;
+}
+

@@ -1,0 +1,80 @@
+.container{
+	width: 600px;
+	height: 600px;
+	background: #CCCCCC;
+	margin: 0 auto;
+	margin-top: 30px;
+	border: 1px solid #F10215;
+}
+.back{
+	width: 10px;
+	height: 10px;
+	border-color:#666666;
+}
+.container .headimg{
+	width: 200px;
+	height:200px;
+	margin: 0 auto;
+	padding-top: 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.headimg img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.headimg a{
+	color: #666666;
+}
+.headimg a:hover{
+	color: #F10215;
+}
+
+.information{
+	width: 400px;
+	height: 240px;
+	margin: 0 auto;
+}
+.info-form-ul{
+	width: 400px;
+	height: 240px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	border: 1px solid #F10215;
+	border-radius: 20%;
+	color: #000;
+}
+.info-form-ul2{
+	width: 400px;
+	height: 240px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	border: 1px solid #F10215;
+	border-radius: 20%;
+	color: #000;
+}
+.info-form-ul li{
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+	margin: 0 auto;
+	padding-left: 100px;
+}
+.info-form-ul2 li{
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+	margin: 0 auto;
+	padding-left: 100px;
+}
+.changedata{
+	float: right;
+}
+.changedata a{
+	color: #666666;
+}
+.changedata a:hover{
+	color: #F10215;
+	text-decoration: underline;
+}
