@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<style>
+  a {
+    color: #555;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  li:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+
+
+
+  .playing {
+    animation: test 5s linear infinite;
+  }
+
+  @keyframes test {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<body>
+  <div id="app">
+    <!-- 搜索栏部分 头部 -->
+    <div class="container">
+      <!-- 遮罩层 用于播放mv -->
+      <div class="row">
+        <nav class="navbar navbar-default col-xs-10 col-xs-offset-1">
+          <div class="container-fluid">
+            <form class="navbar-form navbar-left" action="#">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Music" @keyup.enter="getMusic"
+                  v-model="query">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <!-- 内容部分 -->
+      <div class="row">
+        <!-- 内容盒子 -->
+        <div class="col-xs-10 col-xs-offset-1"
+          style="overflow-y: auto;overflow-x: hidden;height: 400px;width: 974px;background:rgba(0,0,0,0.1)">
+          <!-- 输出的歌曲 -->
+          <div style="overflow-y: auto;overflow-x: hidden;height: 380px;max-width: 250px;margin-top: 10px;"
+            class="col-xs-4">
+            <ul class="list-group" style="max-height: 400px;max-width: 400px;">
+              <li v-for="item in musicList" href="#" class="list-group-item" style="width: 300px;height: 40px;">
+                <!-- 播放按钮 -->
+                <i style="color: #4239ad;" class="glyphicon glyphicon-play" @click="playMusic(item.id)"></i>
+                <!-- 歌曲名字 -->
+                <a class=""> {{ item.name }} </a>
+                <!-- 播放mv -->
+                <span class="glyphicon glyphicon-film" v-if="item.mvid!=0" @click="playMV(item.mvid)"></span>
+              </li>
+            </ul>
+          </div>
+          <!-- 专辑封面 -->
+          <div class="col-xs-4">
+            <div>
+              <img :class="{playing:isPlaying}" :src="musicPic" width="250px" height="250px"
+                style="margin-top: 80px;margin-left: 20px;border-radius: 50%;" v-show="!isShow">
+              <video :src="mvUrl" v-show="isShow" style="display: none;outline: none;" width="550px" height="390px"
+                controls autoplay></video>
+            </div>
+          </div>
+          <!-- 热门评论 -->
+          <div class="col-xs-4 col-xs-offset-1" style="overflow-y: auto;overflow-x: hidden;height: 400px;width: 300px;"
+            v-show="!isShow">
+            <dl>网抑云热门评论</dl>
+            <dl v-for="item in usercontent" style="height: 100px;width: 300px;margin-top: 10px;position: relative;">
+              <dt style="width:50px;height:50px;float: left;"><img :src="item.user.avatarUrl"
+                  style="border-radius: 50%;" width="50px" height="50px" />
+              <dd style="width: 300px;position: absolute;top: 0;left: 55px;">
+                <strong> {{ item.user.nickname }} </strong>
+              </dd>
+              <dd
+                style="max-width: 200px;height:80px;position: absolute;top:15px;left: 55px;text-overflow: ellipsis;overflow: hidden;"
+                :title="item.content">
+                {{ item.content }}
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- 音乐播放器 -->
+      <div class="row">
+        <audio :src="musicUrl" @play="play" @pause="pause" style="margin-top: 10px;outline: none;" controls autoplay
+          v-show="!isShow" loop="loop" class="col-xs-10 col-xs-offset-1"></audio>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/vue.js"></script>
+  <script src="js/music.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
