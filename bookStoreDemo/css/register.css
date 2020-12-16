@@ -1,0 +1,122 @@
+body {
+	background-color:#f8f5f9;
+	margin:0;
+	padding:0;
+	overflow-y: hidden;
+}
+.box {
+	width:400px;
+	height: 350px;
+	position: relative;
+	margin: 200px auto;
+	padding-top: 20px;
+	box-sizing: border-box;
+	border:1px solid #ccc;
+	background-color:#fff;
+}
+.box h1{
+	font-size:20px;
+	text-align:center;
+}
+.profile-table {
+	margin:0 auto;
+	margin-top: 0;
+}
+.profile-table th{
+	font-weight:normal;
+	text-align:right;
+}
+.profile-table input[type="text"]{
+	width:180px;
+	border:1px solid #ccc;
+	height:22px;
+	padding-left:4px;
+}
+.profile-table input[type="password"]{
+	width:180px;
+	border:1px solid #ccc;
+	height:22px;
+	padding-left:4px;
+}
+.profile-table .button{
+	background-color:#F10215;
+	border:1px solid #FFFFFF;
+	color:#fff;
+	width:80px;
+	height:25px;
+	margin:0 5px;
+	cursor:pointer;
+}
+.profile-table .td-btn{
+	text-align:center;
+	padding-top:10px;
+}
+.profile-table th,.profile-table td{
+	padding-bottom:10px;
+}
+.profile-table td{
+	font-size:14px;
+}
+.profile-table .txttop{
+	vertical-align:top;
+}
+.profile-table select{
+	border:1px solid #ccc;
+	min-width:80px;
+	height:25px;
+}
+.profile-table .description{
+	font-size:13px;
+	width:250px;
+	height:60px;
+	border:1px solid #ccc;
+}
+	
+
+/*footer*/
+.footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+	margin: auto;
+	height: 90px;
+}
+
+/* footer-pic */
+.footer-pic{
+	width: 940px;
+	height: 79px;
+	margin: 0 auto;
+}
+.footer-pic-inner{
+	width: 940px;
+	height: 79px;
+}
+.footer-pic .footer-pic-inner a{
+	width: 235px;
+	height: 79px;
+	line-height: 79px;
+	color: #F10215;
+	margin-left: 83px;
+	text-align: center;
+}
+
+/* footer-div */
+.footer-div{
+	height: 90px;
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.footer-div a{
+	width: 100px;
+	height: 30px;
+	padding-left:10px;
+	padding-right: 10PX;
+	line-height: 30px;	
+	color: #666666;
+}
+.footer-div a:hover{
+	color: #f10215;
+}
